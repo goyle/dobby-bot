@@ -115,9 +115,6 @@ fn main() {
     let token = env::var("DISCORD_TOKEN")
         .expect("Expected a token in the environment");
 
-    let prefix: &str = &env::var("PREFIX")
-        .expect("Expected a token in the environment");
-
     let mut client = Client::new(&token, Handler).expect("Err creating client");
 
     {
@@ -139,7 +136,7 @@ fn main() {
     client.with_framework(StandardFramework::new()
         .configure(|c| c
             .owners(owners)
-            .prefix(prefix))
+            .prefix("GRIN "))
         .before(|ctx, msg, command_name| {
             println!("Got command '{}' by user '{}'",
                         command_name,

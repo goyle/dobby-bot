@@ -45,7 +45,7 @@ fn code_of_conduct(ctx: &mut Context, msg: &Message) -> CommandResult {
 }
 
 #[command]
-#[aliases("blocktime", "reward", "miningreward", "monetarypolicy")]
+#[aliases("emissions", "blocktime", "reward", "miningreward", "monetarypolicy")]
 fn emission(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {
         m.embed(|e| {

@@ -54,7 +54,7 @@ impl EventHandler for Handler {
 struct General;
 
 #[group]
-#[commands(calculator, code_of_conduct, emission, explorers, governance, grin, miners, philosophy, roadmap, symbol, wallets)]
+#[commands(calculator, code_of_conduct, emission, explorers, governance, grin, miners, philosophy, roadmap, spending_log, symbol, wallets)]
 struct Grin;
 
 // The framework provides two built-in help commands for you to use.

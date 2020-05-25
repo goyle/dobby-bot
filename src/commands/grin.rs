@@ -172,6 +172,24 @@ fn roadmap(ctx: &mut Context, msg: &Message) -> CommandResult {
 }
 
 #[command]
+#[aliases("spending", "spendinglog")]
+fn spending_log(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e| {
+            e.title("Spending Log :pound:");
+            e.description("A log intended to keep the community up to date on how the Grin General Fund is being used.");
+            e.field("Spending Log", "https://github.com/mimblewimble/grin-pm/blob/master/financials/spending_log.csv", false);
+            e.field("Burn-rate & Runway Report", "https://github.com/mimblewimble/grin-pm/blob/master/financials/reports/burnrate_runway.md", false);
+
+            e
+        });
+        m
+    });
+
+    Ok(())
+}
+
+#[command]
 #[aliases("currency", "currencysymbol")]
 fn symbol(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {

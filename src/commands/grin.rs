@@ -50,7 +50,7 @@ fn emission(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {
         m.embed(|e| {
             e.title("Emission :cloud_rain:");
-            e.description("1 ツ per second forever. Each block contains a 60 ツ reward and the block confirmation time is targeted at 1 minute per block. Supply inflation rate stays constant.");
+            e.description("1 ツ per second forever. Each block contains a 60 ツ reward and the block confirmation time is targeted at 1 minute per block.");
             e.field("For more info on Grin's monetary policy", 
             "https://github.com/mimblewimble/docs/wiki/Monetary-Policy", false);
 

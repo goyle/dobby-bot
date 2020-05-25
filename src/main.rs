@@ -166,7 +166,6 @@ fn main() {
             }
         })
         .help(&MY_HELP)
-        // Can't be used more than 1 times per 43200 seconds, with a 5 second delay:
         .group(&GENERAL_GROUP)
         .group(&GRIN_GROUP));
 

@@ -1,5 +1,5 @@
 # dobby-bot
-A Discord bot designed to provide instant answers to (Grin)[https://github.com/mimblewimble/grin/] related questions.
+A Discord bot designed to provide instant answers to [Grin](https://github.com/mimblewimble/grin/) related questions.
 
 ## Usage
 Prepend all commands with the prefix `GRIN `.
@@ -26,7 +26,7 @@ Prepend all commands with the prefix `GRIN `.
 * A Discord token
 
 ### Discord token
-1. Create a (Discord application)[https://discordapp.com/developers/applications/].
+1. Create a [Discord application](https://discordapp.com/developers/applications/).
 2. Go to your application and then to the Bot tab under Settings. In here, you can create a bot and copy the token. The token is what will be put in the `DISCORD_TOKEN` variable inside the .env file.
 3. Create the invite link for the bot by going to the OAuth2 tab under Settings. Select the checkbox for bot in Scopes. The invite link should appear. Select any checkbox for permissions you want the bot to have.
 

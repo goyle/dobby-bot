@@ -23,7 +23,7 @@ fn about(ctx: &mut Context, msg: &Message) -> CommandResult {
 
             e
         });
-        m.add_file(AttachmentType::Path(Path::new("./img/dobby.png")));
+        m.add_file(AttachmentType::Path(Path::new("./assets/dobby.png")));
         m
     });
 

@@ -10,10 +10,10 @@ Prepend all commands with the prefix `GRIN `.
 | `code_of_conduct` | `coc` `CoC` `COC` `code` `conduct` `codeofconduct`               |
 | `emission`        | `emissions` `blocktime` `reward` `miningreward` `monetarypolicy` |
 | `explorers`       | `explorer`                                                       |
-| `governance`      |                                                                  |
+| `governance`      | `gov`                                                            |
 | `grin`            | `info` `grininfo` `grinfo`                                       |
 | `miners`          | `miner`                                                          |
-| `philosophy`      |                                                                  |
+| `philosophy`      | `philo`                                                          |
 | `roadmap`         |                                                                  |
 | `spending_log`    | `spending` `spendinglog`                                         |
 | `symbol`          | `currency` `currencysymbol`                                      |

@@ -4,20 +4,29 @@ A Discord bot designed to provide instant answers to [Grin](https://github.com/m
 ## Usage
 Prepend all commands with the prefix `GRIN `.
 
+### Project
+| Command           | Aliases                                                          |
+| ----------------- | ---------------------------------------------------------------- |
+| `code_of_conduct` | `coc` `CoC` `COC` `code` `conduct` `codeofconduct`               |
+| `coin`            | `info` `grininfo` `grinfo`                                       |
+| `emission`        | `emissions` `blocktime` `reward` `miningreward` `monetarypolicy` |
+| `governance`      | `gov`                                                            |
+| `philosophy`      | `philo`                                                          |
+| `roadmap`         |                                                                  |
+| `symbol`          | `currency` `currencysymbol`                                      |
+
+### Community
+| Command           | Aliases                                                          |
+| ----------------- | ---------------------------------------------------------------- |
+| `explorers`       | `explorer`                                                       |
+| `spending_log`    | `spending` `spendinglog`                                         |
+| `wallets`         | `wallet`                                                         |
+
+### Mining
 | Command           | Aliases                                                          |
 | ----------------- | ---------------------------------------------------------------- |
 | `calculator`      | `calc` `miningcalc` `miningcalculator`                           |
-| `code_of_conduct` | `coc` `CoC` `COC` `code` `conduct` `codeofconduct`               |
-| `emission`        | `emissions` `blocktime` `reward` `miningreward` `monetarypolicy` |
-| `explorers`       | `explorer`                                                       |
-| `governance`      | `gov`                                                            |
-| `grin`            | `info` `grininfo` `grinfo`                                       |
 | `miners`          | `miner`                                                          |
-| `philosophy`      | `philo`                                                          |
-| `roadmap`         |                                                                  |
-| `spending_log`    | `spending` `spendinglog`                                         |
-| `symbol`          | `currency` `currencysymbol`                                      |
-| `wallets`         | `wallet`                                                         |
 
 ## Build, Configuration, and Running
 

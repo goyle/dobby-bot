@@ -100,7 +100,7 @@ fn wallets(ctx: &mut Context, msg: &Message) -> CommandResult {
 
             e
         });
-        m.add_file(AttachmentType::Path(Path::new("./assets/grinplusplus.png")));
+        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/grinplusplus.png")));
         m
     });
 

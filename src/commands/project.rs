@@ -27,6 +27,24 @@ fn code_of_conduct(ctx: &mut Context, msg: &Message) -> CommandResult {
 }
 
 #[command]
+#[aliases("info", "grininfo", "grinfo")]
+fn coin(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e|{
+            e.title("Grin :no_mouth:");
+            e.description("Basic information about Grin.");
+            e.field("Statement", "Grin is electronic cash with a lightweight implementation of Mimblewimble. Mimblewimble is a blockchain protocol that provides privacy and scalability gains by verifying that all transactions are valid without needing to store the entire history of the chain.", false);
+            e.field("For more info", "https://github.com/mimblewimble/grin/blob/master/doc/intro.md", false);
+
+            e
+        });
+        m
+    });
+
+    Ok(())
+}
+
+#[command]
 #[aliases("emissions", "blocktime", "reward", "miningreward", "monetarypolicy")]
 fn emission(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {
@@ -55,24 +73,6 @@ fn governance(ctx: &mut Context, msg: &Message) -> CommandResult {
             e.field("Core Team", "hashmap, antiochp, lehnberg, ~~ignotus~~, jaspervdm, tromp, j01tz, yeastplume, quentinlesceller", false);
             e.field("For more info", 
             "https://grin.mw/governance", false);
-
-            e
-        });
-        m
-    });
-
-    Ok(())
-}
-
-#[command]
-#[aliases("info", "grininfo", "grinfo")]
-fn grin(ctx: &mut Context, msg: &Message) -> CommandResult {
-    let _ = msg.channel_id.send_message(&ctx.http, |m| {
-        m.embed(|e|{
-            e.title("Grin :no_mouth:");
-            e.description("Basic information about Grin.");
-            e.field("Statement", "Grin is electronic cash with a lightweight implementation of Mimblewimble. Mimblewimble is a blockchain protocol that provides privacy and scalability gains by verifying that all transactions are valid without needing to store the entire history of the chain.", false);
-            e.field("For more info", "https://github.com/mimblewimble/grin/blob/master/doc/intro.md", false);
 
             e
         });

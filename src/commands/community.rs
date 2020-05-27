@@ -45,6 +45,24 @@ fn explorers(ctx: &mut Context, msg: &Message) -> CommandResult {
 }
 
 #[command]
+#[aliases("request", "fundingrequest")]
+fn funding_request(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e| {
+            e.title("Funding Request :pie:");
+            e.description("Do you want to work full time or even part time on the Grin project? Come and submit a funding request to the community! Be prepared to state your motivation and respond to community feedback.");
+            e.field("Funding Request Template", "https://github.com/mimblewimble/grin-pm/blob/master/financials/funding_request_template.md", false);
+            e.field("Example of a full length funding request", "https://forum.grin.mw/t/request-for-funding-lehnberg-jan-mar-2020/6767", false);
+
+            e
+        });
+        m
+    });
+
+    Ok(())
+}
+
+#[command]
 #[aliases("spending", "spendinglog")]
 fn spending_log(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {

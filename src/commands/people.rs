@@ -19,7 +19,8 @@ fn ignotus(ctx: &mut Context, msg: &Message) -> CommandResult {
             e.field("Github", "https://github.com/ignopeverell", false);
             e.field("Grin Forum", "https://forum.grin.mw/u/igno.peverell/", false);
             e.footer(|f| {
-                f.text("Ignotus Peverell");
+                f.text("\"Ceci n’est pas un Ignotus.\" \n\
+                \t -Ignotus Peverell's last words");
 
                 f
             });

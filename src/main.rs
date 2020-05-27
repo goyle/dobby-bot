@@ -69,6 +69,7 @@ struct Community;
 struct Mining;
 
 #[group]
+#[commands(ignotus)]
 struct People;
 
 // The framework provides two built-in help commands for you to use.

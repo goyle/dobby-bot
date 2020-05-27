@@ -9,7 +9,7 @@ use serenity::framework::standard::{
 use serenity::http::AttachmentType;
 
 #[command]
-#[aliases("ded", "dead")]
+#[aliases("ded", "dead", "death", "deaths")]
 fn obituary(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {
         m.embed(|e| {

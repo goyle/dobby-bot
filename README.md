@@ -18,7 +18,7 @@ Prepend all commands with the prefix `GRIN `.
 ### Community
 | Command           | Aliases                                                          |
 | ----------------- | ---------------------------------------------------------------- |
-| `obituary`        | `ded` `dead`                                                     |
+| `obituary`        | `ded` `dead` `death` `deaths`                                    |
 | `explorers`       | `explorer`                                                       |
 | `funding_request` | `request` `fundingrequest`                                       |
 | `spending_log`    | `spending` `spendinglog`                                         |

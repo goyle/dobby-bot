@@ -57,7 +57,7 @@ impl EventHandler for Handler {
 struct Bot;
 
 #[group]
-#[commands(code_of_conduct, emission, governance, grin, philosophy, roadmap, symbol)]
+#[commands(code_of_conduct, coin, emission, governance, philosophy, roadmap, symbol)]
 struct Project;
 
 #[group]

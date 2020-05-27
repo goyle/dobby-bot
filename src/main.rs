@@ -54,7 +54,7 @@ impl EventHandler for Handler {
 
 #[group]
 #[commands(about, ping, quit)]
-struct General;
+struct Bot;
 
 #[group]
 #[commands(code_of_conduct, emission, governance, grin, philosophy, roadmap, symbol)]
@@ -180,7 +180,7 @@ fn main() {
             }
         })
         .help(&MY_HELP)
-        .group(&GENERAL_GROUP)
+        .group(&BOT_GROUP)
         .group(&PROJECT_GROUP)
         .group(&COMMUNITY_GROUP)
         .group(&MINING_GROUP)

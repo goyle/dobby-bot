@@ -21,9 +21,12 @@ use serenity::{
 use log::{error, info};
 
 use commands::{
+    community::*,
     meta::*,
     owner::*,
     grin::*,
+    mining:*,
+    people:*,
 };
 struct ShardManagerContainer;
 
@@ -56,6 +59,15 @@ struct General;
 #[group]
 #[commands(calculator, code_of_conduct, emission, explorers, governance, grin, miners, philosophy, roadmap, spending_log, symbol, wallets)]
 struct Grin;
+
+#[group]
+struct Community;
+
+#[group]
+struct Mining;
+
+#[group]
+struct People;
 
 // The framework provides two built-in help commands for you to use.
 // But you can also make your own customized help command that forwards
@@ -167,7 +179,10 @@ fn main() {
         })
         .help(&MY_HELP)
         .group(&GENERAL_GROUP)
-        .group(&GRIN_GROUP));
+        .group(&GRIN_GROUP)
+        .group(&COMMUNITY_GROUP)
+        .group(&MINING_GROUP)
+        .group(&PEOPLE_GROUP));
 
     if let Err(why) = client.start() {
         error!("Client error: {:?}", why);

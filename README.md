@@ -18,7 +18,9 @@ Prepend all commands with the prefix `GRIN `.
 ### Community
 | Command           | Aliases                                                          |
 | ----------------- | ---------------------------------------------------------------- |
+| `obituary`        | `ded` `dead`                                                     |
 | `explorers`       | `explorer`                                                       |
+| `funding_request` | `request` `fundingrequest`                                       |
 | `spending_log`    | `spending` `spendinglog`                                         |
 | `wallets`         | `wallet`                                                         |
 
@@ -27,6 +29,11 @@ Prepend all commands with the prefix `GRIN `.
 | ----------------- | ---------------------------------------------------------------- |
 | `calculator`      | `calc` `miningcalc` `miningcalculator`                           |
 | `miners`          | `miner`                                                          |
+
+### People
+| Command           | Aliases                                                          |
+| ----------------- | ---------------------------------------------------------------- |
+| `ignotus`         | `igno` `Igno` `Ignotus`                                          |
 
 ## Build, Configuration, and Running
 

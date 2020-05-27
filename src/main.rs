@@ -25,8 +25,8 @@ use commands::{
     owner::*,
     project::*,
     community::*,
-    mining:*,
-    people:*,
+    mining::*,
+    people::*,
 };
 struct ShardManagerContainer;
 

@@ -21,10 +21,10 @@ use serenity::{
 use log::{error, info};
 
 use commands::{
-    community::*,
     meta::*,
     owner::*,
-    grin::*,
+    project::*,
+    community::*,
     mining:*,
     people:*,
 };
@@ -57,13 +57,15 @@ impl EventHandler for Handler {
 struct General;
 
 #[group]
-#[commands(calculator, code_of_conduct, emission, explorers, governance, grin, miners, philosophy, roadmap, spending_log, symbol, wallets)]
-struct Grin;
+#[commands(code_of_conduct, emission, governance, grin, philosophy, roadmap, symbol)]
+struct Project;
 
 #[group]
+#[commands(explorers, spending_log, wallets)]
 struct Community;
 
 #[group]
+#[commands(calculator, miners)]
 struct Mining;
 
 #[group]
@@ -179,7 +181,7 @@ fn main() {
         })
         .help(&MY_HELP)
         .group(&GENERAL_GROUP)
-        .group(&GRIN_GROUP)
+        .group(&PROJECT_GROUP)
         .group(&COMMUNITY_GROUP)
         .group(&MINING_GROUP)
         .group(&PEOPLE_GROUP));

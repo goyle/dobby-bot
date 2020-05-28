@@ -62,7 +62,7 @@ struct Bot;
 struct Project;
 
 #[group]
-#[commands(obituary, explorers, funding_request, grinpp, spending_log, wallets)]
+#[commands(explorers, funding_request, grinpp, obituary, spending_log, wallets)]
 struct Community;
 
 #[group]

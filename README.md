@@ -21,9 +21,15 @@ Prepend all commands with the prefix `GRIN `.
 | `obituary`        | `ded` `dead` `death` `deaths`                                    |
 | `explorers`       | `explorer`                                                       |
 | `funding_request` | `request` `fundingrequest`                                       |
-| `grinpp`          | `grin++` `grinplusplus`                                          |
 | `spending_log`    | `spending` `spendinglog`                                         |
 | `wallets`         | `wallet`                                                         |
+
+### Wallets
+| Command           | Aliases                                                          |
+| ----------------- | ---------------------------------------------------------------- |
+| `ironbelly`       |                                                                  |
+| `grinpp`          | `grin++` `grinplusplus`                                          |
+| `niffler`         |                                                                  |
 
 ### Mining
 | Command           | Aliases                                                          |

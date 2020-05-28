@@ -63,6 +63,33 @@ fn funding_request(ctx: &mut Context, msg: &Message) -> CommandResult {
 }
 
 #[command]
+#[aliases("grin++","grinplusplus")]
+fn grinpp(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e| {
+            e.title("Grin++ Wallet");
+            e.thumbnail("attachment://grinplusplus_logo.png");
+            e.description("_Fast, Private and Secure Grin Wallet._ \n\
+            \n\
+            Features include multiplatform, coin control, multi-user, multi-language, and security audited code. Based on Grin++, a Lightning-Fast C++ Implementation of Grin.");
+            e.field("Grin++ Website", "https://grinplusplus.github.io/", false);
+            e.image("attachment://grinplusplus.png");
+            e.footer(|f| {
+                f.text("Grin++ Wallet v1.0.0");
+    
+                f
+            });
+            e
+        });
+        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/grinplusplus_logo.png")));
+        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/grinplusplus.png")));
+        m
+    });
+
+    Ok(())
+}
+
+#[command]
 #[aliases("spending", "spendinglog")]
 fn spending_log(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {

@@ -25,6 +25,7 @@ use commands::{
     owner::*,
     project::*,
     community::*,
+    wallets::*,
     mining::*,
     people::*,
 };
@@ -63,6 +64,10 @@ struct Project;
 #[group]
 #[commands(obituary, explorers, funding_request, grinpp, spending_log, wallets)]
 struct Community;
+
+#[group]
+#[commands(ironbelly, grinpp, niffler)]
+struct Wallets;
 
 #[group]
 #[commands(calculator, miners)]
@@ -184,6 +189,7 @@ fn main() {
         .group(&BOT_GROUP)
         .group(&PROJECT_GROUP)
         .group(&COMMUNITY_GROUP)
+        .group(&WALLETS_GROUP)
         .group(&MINING_GROUP)
         .group(&PEOPLE_GROUP));
 

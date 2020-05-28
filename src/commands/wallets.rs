@@ -8,14 +8,6 @@ use serenity::framework::standard::{
 };
 use serenity::http::AttachmentType;
 
-
-#[command]
-fn ironbelly(ctx: &mut Context, msg: &Message) -> CommandResult {
-    let _ = msg.channel_id.say(&ctx.http, "_Work-in-progress_");
-
-    Ok(())
-}
-
 #[command]
 #[aliases("grin++","grinplusplus")]
 fn grinpp(ctx: &mut Context, msg: &Message) -> CommandResult {
@@ -39,6 +31,13 @@ fn grinpp(ctx: &mut Context, msg: &Message) -> CommandResult {
         m.add_file(AttachmentType::Path(Path::new("./assets/wallets/grinplusplus.png")));
         m
     });
+
+    Ok(())
+}
+
+#[command]
+fn ironbelly(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.say(&ctx.http, "_Work-in-progress_");
 
     Ok(())
 }

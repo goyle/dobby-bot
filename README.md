@@ -27,8 +27,8 @@ Prepend all commands with the prefix `GRIN `.
 ### Wallets
 | Command           | Aliases                                                          |
 | ----------------- | ---------------------------------------------------------------- |
-| `ironbelly`       |                                                                  |
 | `grinpp`          | `grin++` `grinplusplus`                                          |
+| `ironbelly`       |                                                                  |
 | `niffler`         |                                                                  |
 
 ### Mining

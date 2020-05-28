@@ -87,20 +87,18 @@ fn wallets(ctx: &mut Context, msg: &Message) -> CommandResult {
         m.embed(|e| {
             e.title("Wallets :purse:");
             e.description("List of Grin wallets.");
-            e.image("attachment://grinplusplus.png");
             e.field("Reference CLI Wallet (Windows, Mac, Linux)", "https://github.com/mimblewimble/grin-wallet/releases", false);
-            e.field("Grin++ GUI Wallet (Windows, Mac, Linux)", "https://grinplusplus.github.io/", false);
-            e.field("Niffler GUI Wallet (Windows, Mac, Linux)", "https://github.com/grinfans/niffler/releases/tag/v0.5.0", false);
-            e.field("Ironbelly Mobile Wallet (iOS, Android)","https://ironbelly.app/", false);
+            e.field("`grinpp` Grin++ GUI Wallet (Windows, Mac, Linux)", "https://grinplusplus.github.io/", false);
+            e.field("`niffler` Niffler GUI Wallet (Windows, Mac, Linux)", "https://github.com/grinfans/niffler/releases/tag/v0.5.0", false);
+            e.field("`ironbelly` Ironbelly Mobile Wallet (iOS, Android)","https://ironbelly.app/", false);
             e.footer(|f| {
-                f.text("Grin++ Wallet v1.0.0");
-
+                f.text("For more info about a wallet, enter its name as a command.");
+    
                 f
             });
 
             e
         });
-        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/grinplusplus.png")));
         m
     });
 

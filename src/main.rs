@@ -66,7 +66,7 @@ struct Project;
 struct Community;
 
 #[group]
-#[commands(ironbelly, grinpp, niffler)]
+#[commands(grinpp, ironbelly, niffler)]
 struct Wallets;
 
 #[group]

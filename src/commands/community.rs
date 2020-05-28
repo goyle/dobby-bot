@@ -9,23 +9,6 @@ use serenity::framework::standard::{
 use serenity::http::AttachmentType;
 
 #[command]
-#[aliases("ded", "dead", "death", "deaths")]
-fn obituary(ctx: &mut Context, msg: &Message) -> CommandResult {
-    let _ = msg.channel_id.send_message(&ctx.http, |m| {
-        m.embed(|e| {
-            e.title("Obituary :skull:");
-            e.description("Collecting stories of the casualty. Grin is dead, long live Grin!");
-            e.field("Grin Obituaries", "http://grin-obituaries.com/", false);
-
-            e
-        });
-        m
-    });
-        
-    Ok(())
-}
-
-#[command]
 #[aliases("explorer")]
 fn explorers(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {
@@ -59,6 +42,23 @@ fn funding_request(ctx: &mut Context, msg: &Message) -> CommandResult {
         m
     });
 
+    Ok(())
+}
+
+#[command]
+#[aliases("ded", "dead", "death", "deaths")]
+fn obituary(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e| {
+            e.title("Obituary :skull:");
+            e.description("Collecting stories of the casualty. Grin is dead, long live Grin!");
+            e.field("Grin Obituaries", "http://grin-obituaries.com/", false);
+
+            e
+        });
+        m
+    });
+        
     Ok(())
 }
 

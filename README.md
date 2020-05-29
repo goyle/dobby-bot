@@ -50,7 +50,7 @@ Prepend all commands with the prefix `GRIN `.
 
 ### Getting a Discord token
 1. Create a [Discord application](https://discordapp.com/developers/applications/).
-2. Go to your application and then to the Bot tab under Settings. In here, you can create a bot and copy the token. The token is what will be put in the `DISCORD_TOKEN` variable inside the `.env` file.
+2. Go to your application and then to the Bot tab under Settings. In here, you can create a bot and copy the token. The token is what will be put in the `DISCORD_TOKEN` variable inside your `.env` file that you will create from `.env.example`.
 3. Create the invite link for the bot by going to the OAuth2 tab under Settings. Select the checkbox for bot in Scopes. The invite link should appear. Select any checkbox for permissions you want the bot to have.
 
 ### Build and run

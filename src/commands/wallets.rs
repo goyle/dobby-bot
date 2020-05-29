@@ -14,7 +14,7 @@ fn grinpp(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {
         m.embed(|e| {
             e.title("Grin++ Wallet");
-            e.thumbnail("attachment://grinplusplus_logo.png");
+            e.thumbnail("attachment://grinplusplus-logo.png");
             e.description("_Fast, Private and Secure Grin Wallet._ \n\
             \n\
             Features include multiplatform, coin control, multi-user, multi-language, and security audited code. Based on Grin++, a Lightning-Fast C++ Implementation of Grin.");
@@ -27,7 +27,7 @@ fn grinpp(ctx: &mut Context, msg: &Message) -> CommandResult {
             });
             e
         });
-        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/grinplusplus_logo.png")));
+        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/grinplusplus-logo.png")));
         m.add_file(AttachmentType::Path(Path::new("./assets/wallets/grinplusplus.png")));
         m
     });

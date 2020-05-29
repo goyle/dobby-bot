@@ -15,7 +15,7 @@ use serenity::{
             DispatchError, HelpOptions, help_commands,
         },
     },
-    model::{channel::{Channel, Message}, id::UserId, event::ResumedEvent, gateway::Ready},
+    model::{channel::{Channel, Message}, id::UserId, event::ResumedEvent, gateway::{Ready, Activity}},
     prelude::*,
 };
 use log::{error, info};
@@ -44,8 +44,11 @@ impl TypeMapKey for CommandCounter {
 struct Handler;
 
 impl EventHandler for Handler {
-    fn ready(&self, _: Context, ready: Ready) {
+    fn ready(&self, ctx: Context, ready: Ready) {
         info!("Connected as {}", ready.user.name);
+
+        // Set bot status
+        ctx.set_activity(Activity::playing("🤔? | GRIN help"));
     }
 
     fn resume(&self, _: Context, _: ResumedEvent) {

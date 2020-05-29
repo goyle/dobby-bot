@@ -68,7 +68,27 @@ fn ironbelly(ctx: &mut Context, msg: &Message) -> CommandResult {
 
 #[command]
 fn niffler(ctx: &mut Context, msg: &Message) -> CommandResult {
-    let _ = msg.channel_id.say(&ctx.http, "_Work-in-progress_");
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e| {
+            e.title("Niffler Wallet");
+            e.thumbnail("attachment://niffler-logo.png");
+            e.description("_Out-of-the-box user-friendly GUI Grin wallet_ \n\
+            \n\
+            Features include a simple, straightforward user interface, multiple languages (English and 简体中文), and the Hedwig v1 relay service.
+            Hedwig provides a temporary address for users without a public IP to receive Grin.");
+            e.field("Github", "https://github.com/grinfans/niffler", false);
+            e.image("attachment://niffler.png");
+            e.footer(|f| {
+                f.text("Niffler Wallet v0.5.0");
+    
+                f
+            });
+            e
+        });
+        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/niffler-logo.png")));
+        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/niffler.png")));
+        m
+    });
 
     Ok(())
 }

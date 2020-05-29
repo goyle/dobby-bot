@@ -43,11 +43,12 @@ fn ironbelly(ctx: &mut Context, msg: &Message) -> CommandResult {
             e.thumbnail("attachment://ironbelly-logo.png");
             e.description("_Grin wallet you've deserved._ \n\
             \n\
-            Ironbelly is a mobile wallet for Grin blockchain. You can: \n\
+            Ironbelly is a mobile wallet for Grin blockchain. \n\
+            You can: \n\
             - Send Grin via http(s) or File \n\
             - Receive Grin via File (via http(s) is coming soon!) \n\
             - Protect your funds with Touch ID or Face ID \n\
-            - See your funds using alternative currency ");
+            - See your funds using alternative currency");
             e.field("Ironbelly Website", "https://ironbelly.app/", false);
             e.image("attachment://ironbelly.png");
             e.footer(|f| {

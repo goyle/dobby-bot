@@ -91,6 +91,7 @@ fn wallets(ctx: &mut Context, msg: &Message) -> CommandResult {
             e.field("`grinpp` Grin++ GUI Wallet (Windows, Mac, Linux)", "https://grinplusplus.github.io/", false);
             e.field("`niffler` Niffler GUI Wallet (Windows, Mac, Linux)", "https://github.com/grinfans/niffler/releases/tag/v0.5.0", false);
             e.field("`ironbelly` Ironbelly Mobile Wallet (iOS, Android)","https://ironbelly.app/", false);
+            e.field("`wallet713` Wallet713 (Windows, Mac, Linux)", "https://github.com/vault713/wallet713", false);
             e.footer(|f| {
                 f.text("For more info about a wallet, enter its name as a command.");
     

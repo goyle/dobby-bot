@@ -31,6 +31,7 @@ Prepend all commands with the prefix `GRIN `.
 | `grinpp`          | `grin++` `grinplusplus`                                          |
 | `ironbelly`       |                                                                  |
 | `niffler`         |                                                                  |
+| `wallet713`       | `713`                                                            |
 
 ### Mining
 | Command           | Aliases                                                          |

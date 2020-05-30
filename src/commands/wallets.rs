@@ -92,3 +92,11 @@ fn niffler(ctx: &mut Context, msg: &Message) -> CommandResult {
 
     Ok(())
 }
+
+#[command]
+#[aliases("713")]
+fn wallet713(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.say(&ctx.http, "_Work-in-progress_");
+
+    Ok(())
+}

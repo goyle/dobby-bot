@@ -14,6 +14,7 @@ Prepend all commands with the prefix `GRIN `.
 | `philosophy`      | `philo`                                                          |
 | `roadmap`         |                                                                  |
 | `symbol`          | `currency` `currencysymbol`                                      |
+| `whitepaper`      |                                                                  |
 
 ### Community
 | Command           | Aliases                                                          |

@@ -131,3 +131,26 @@ fn symbol(ctx: &mut Context, msg: &Message) -> CommandResult {
 
     Ok(())
 }
+
+#[command]
+fn whitepaper(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e|{
+            e.title("White Papers :page_facing_up:");
+            e.field("The Mimblewimble White Paper", "In August 2nd, 2016, an anonymous person named Tom Elvis Jedusor dropped the original Mimblewimble white paper on the Bitcoin research IRC channel, #bitcoin-wizards, and then signed off. The white paper was a blockchain proposal that would greatly improve privacy, scalability, and fungibility in Bitcoin. \n\
+            _Read the Mimlewimble white paper:_ \n\
+            > https://github.com/mimblewimble/docs/wiki/MimbleWimble-Origin", false);
+            e.field("Andrew Poelstra's Version", "A few months later, in October 6, 2016, Andrew Poelstra wrote his own paper that would make precise the original Mimblewimble white paper and contribute more scalability improvements. \n\
+            _Read Andrew Poelstra's version:_ \n\
+            > https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.pdf \n", false);
+            e.field("Introduction to Mimblewimble and Grin", "However, Bitcoin’s scripting system was a heavy obstacle to adding Mimblewimble to the Bitcoin protocol and so, a few days later, an anonymous person named Ignotus Peverell launched the Grin project and began building the codebase. Ignotus would later write a technical introduction to Mimblewimble and Grin in March 20, 2017. \n\
+            _Read \"Introduction to Mimblewimble and Grin\" by Ignotus Peverell:_ \n\
+            > https://github.com/mimblewimble/grin/blob/master/doc/intro.md", false);
+
+            e
+        });
+        m
+    });
+
+    Ok(())
+}

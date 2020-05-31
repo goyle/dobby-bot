@@ -138,15 +138,15 @@ fn whitepaper(ctx: &mut Context, msg: &Message) -> CommandResult {
         m.embed(|e|{
             e.title("White Papers :page_facing_up:");
             e.field("The Mimblewimble White Paper", "On August 2nd, 2016, an anonymous person named Tom Elvis Jedusor dropped the original Mimblewimble white paper on the Bitcoin research IRC channel, #bitcoin-wizards, and then signed off. The white paper was a blockchain proposal that would greatly improve privacy, scalability, and fungibility in Bitcoin. \n\
-            _Read the Mimlewimble white paper:_ \n\
+            * _Read the Mimlewimble white paper:_ \n\
             > https://github.com/mimblewimble/docs/wiki/MimbleWimble-Origin", false);
             e.field("Andrew Poelstra's Version", "A few months later, on October 6, 2016, Andrew Poelstra, a mathematician working for Blockstream, wrote his own paper that would make precise the original Mimblewimble white paper and contribute more scalability improvements. \n\
-            _Read Andrew Poelstra's version:_ \n\
+            * _Read Andrew Poelstra's version:_ \n\
             > https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.pdf \n", false);
             e.field("Introduction to Mimblewimble and Grin", "However, Bitcoin’s scripting system was a heavy obstacle to adding Mimblewimble to the Bitcoin protocol and so, a few days later, an anonymous person named Ignotus Peverell launched the Grin project and began building the codebase. Ignotus would later write a technical introduction to Mimblewimble and Grin on March 20, 2017. \n\
-            _Read \"Introduction to Mimblewimble and Grin\" by Ignotus Peverell:_ \n\
+            * _Read \"Introduction to Mimblewimble and Grin\" by Ignotus Peverell:_ \n\
             > https://github.com/mimblewimble/grin/blob/master/doc/intro.md", false);
-
+            e.field("Read more about the brief history of the Mimblewimble white paper:", "https://github.com/mimblewimble/docs/wiki/A-Brief-History-of-MimbleWimble-White-Paper", false);
             e
         });
         m

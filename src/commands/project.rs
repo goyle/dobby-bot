@@ -147,6 +147,7 @@ fn whitepaper(ctx: &mut Context, msg: &Message) -> CommandResult {
             * _Read \"Introduction to Mimblewimble and Grin\" by Ignotus Peverell:_ \n\
             > https://github.com/mimblewimble/grin/blob/master/doc/intro.md", false);
             e.field("Read more about the brief history of the Mimblewimble white paper:", "https://github.com/mimblewimble/docs/wiki/A-Brief-History-of-MimbleWimble-White-Paper", false);
+            
             e
         });
         m

@@ -96,7 +96,25 @@ fn niffler(ctx: &mut Context, msg: &Message) -> CommandResult {
 #[command]
 #[aliases("713")]
 fn wallet713(ctx: &mut Context, msg: &Message) -> CommandResult {
-    let _ = msg.channel_id.say(&ctx.http, "_Work-in-progress_");
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e| {
+            e.title("Wallet713");
+            e.description("_A Swiss Army knife for Grin._ \n\
+            \n\
+            Wallet713 makes it easy to store, send and soon also swap grins seamlessly through a single interface. Built on top of the standard Grin wallet reference implementation, wallet713 extends its functionality to improve usability and reduce friction. For better privacy and usability, the grinbox messaging relay allows the steps to build transactions (partial transactions, or \"slates\") to be routed via the relay, protecting the user from exposing their IP address, and with no impact to the safety of their funds.");
+            e.field("Website", "https://713.mw/", false);
+            e.field("Github", "https://github.com/vault713/wallet713", false);
+            e.image("attachment://wallet713.png");
+            e.footer(|f| {
+                f.text("wallet713 CLI interface");
+    
+                f
+            });
+            e
+        });
+        m.add_file(AttachmentType::Path(Path::new("./assets/wallets/wallet713.png")));
+        m
+    });
 
     Ok(())
 }

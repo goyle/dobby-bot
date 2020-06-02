@@ -46,6 +46,26 @@ fn funding_request(ctx: &mut Context, msg: &Message) -> CommandResult {
 }
 
 #[command]
+#[aliases("meet", "meeting")]
+fn meetings(ctx: &mut Context, msg: &Message) -> CommandResult {
+    let _ = msg.channel_id.send_message(&ctx.http, |m| {
+        m.embed(|e| {
+            e.title("Meetings :speech_balloon:");
+            e.description("Open meetings take place on [Keybase chat](https://keybase.io/team/grincoin) every Tuesday at 15:00 UTC. The topic of discussion changes every week between development and governance.");
+            e.field("Bi-weekly Development Meeting", "Location: grincoin#dev channel on [Keybase](https://keybase.io/team/grincoin)", true);
+            e.field("Bi-weekly Governance Meeting", "Location: grincoin#general channel on [Keybase](https://keybase.io/team/grincoin)", true);
+            e.field("Upcoming meetings :calendar:", "https://github.com/mimblewimble/grin-pm/issues?q=is%3Aissue+is%3Aopen+label%3Ameetings", false);
+            e.field("Past meeting notes :scroll:", "https://github.com/mimblewimble/grin-pm#meeting-notes", false);
+
+            e
+        });
+        m
+    });
+
+    Ok(())
+}
+
+#[command]
 #[aliases("ded", "dead", "death", "deaths")]
 fn obituary(ctx: &mut Context, msg: &Message) -> CommandResult {
     let _ = msg.channel_id.send_message(&ctx.http, |m| {

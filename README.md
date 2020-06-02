@@ -21,6 +21,7 @@ Prepend all commands with the prefix `GRIN `.
 | ----------------- | ---------------------------------------------------------------- |
 | `explorers`       | `explorer`                                                       |
 | `funding_request` | `request` `fundingrequest`                                       |
+| `meetings`        | `meet` `meeting`                                                 |
 | `obituary`        | `ded` `dead` `death` `deaths`                                    |
 | `spending_log`    | `spending` `spendinglog`                                         |
 | `wallets`         | `wallet`                                                         |
